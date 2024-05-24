@@ -1,0 +1,33 @@
+{
+    "nome": "João",
+    "idade": 20,
+    "cidade": "São Paulo"
+}
+
+import json
+json_data= '{"nome":"João", "idade": 20, "cidade":"São Paulo"}'
+data = json.loads(json_data)
+print(data["idade"])
+
+{
+    "fruta": "Maça",
+    "preco": 2.5
+}
+
+json_data = '{"fruta": "Maça", "preco": 2.5 }'
+data =json.loads(json_data)
+
+if "preco" in data:
+      print("A chave 'preco' existe.")
+else:
+      print("A chave 'preco' não existe.")      
+
+{
+      "cores": ["vermelho", "azul", "verde"]
+}      
+
+import json
+json_data = '{"cores": ["vermelho", "azul", "verde"]}'
+data = json.loads(json_data)
+data["cores"].append("amarelo")
+print(json.dumps(data))
